@@ -6,7 +6,6 @@ int decodingscount=0;
 void fun(char a[],int value,int i)
 {
 
-
     if(value>26)
     {
         return;
