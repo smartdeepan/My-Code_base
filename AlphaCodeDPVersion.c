@@ -19,42 +19,6 @@ if(a>9&&a<=26){
 return 0;
 }
 
-void fun(char a[],int value,int i)
-{
-
-
-    if(value>26)
-    {
-        return;
-    }
-    if(value<26&&i==length)
-    {
-        // spl case
-        decodingscount++;
-        return;
-    }
-
-    if(i==length-1)
-    {
-        decodingscount++;
-        return;
-    }
-
-    if(i+1<length)
-    {
-        int tempvalue=(a[i]-'0')*10;
-
-
-        tempvalue+=a[i+1]-'0';
-
-        fun(a,tempvalue,i+2);
-    }
-
-    fun(a,a[i]-'0',i+1);
-
-
-
-}
 void fundp(char a[]){
     unsigned long long dp[length+1];
     int i,j;
